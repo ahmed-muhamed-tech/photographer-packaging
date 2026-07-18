@@ -3,6 +3,7 @@ import Home from "./Components/Home/Home";
 import LanguageProvider from "./Contexts/LanguageContext";
 import Packages from "./Components/Packages/Packages";
 import AdminDashboard from "./Components/Admin/AdminDashboard";
+import Error from "./Components/Error";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/"        element={<Home />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/admin"   element={<AdminDashboard />} />
+        <Route path="*"   element={<Error />} />
       </Routes>
     </LanguageProvider>
   );
