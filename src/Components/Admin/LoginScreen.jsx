@@ -13,8 +13,10 @@ export default function LoginScreen({ onLogin }) {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
 
   async function signIn() {
+    setIsLoading(true)
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
@@ -28,6 +30,7 @@ export default function LoginScreen({ onLogin }) {
     } else {
       onLogin();
     }
+    setIsLoading(false)
   }
 
   function handleSubmit(e) {
@@ -81,10 +84,11 @@ export default function LoginScreen({ onLogin }) {
 
           {error && <p className="text-red-400 text-sm text-center">{error}</p>}
           <button
+            disabled={isLoading}
             type="submit"
-            className="w-full py-3 rounded-2xl font-bold text-white bg-linear-to-r from-indigo-500 to-purple-600 hover:opacity-90 transition"
+            className="cursor-pointer w-full py-3 rounded-2xl font-bold text-white bg-linear-to-r from-indigo-500 to-purple-600 hover:opacity-90 transition"
           >
-            دخول
+            {isLoading ? "جاري تسجيل الدخول..." : "دخول"}
           </button>
         </form>
       </div>

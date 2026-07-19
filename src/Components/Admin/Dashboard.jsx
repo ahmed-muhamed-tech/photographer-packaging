@@ -62,6 +62,7 @@ export default function Dashboard({ onLogout }) {
           onClose={() => setPkgModal(null)}
         />
       )}
+      
       {addonModal !== null && (
         <AddonModal
           addon={addonModal?.id ? addonModal : null}
@@ -104,7 +105,7 @@ export default function Dashboard({ onLogout }) {
           <button
             key={t.key}
             onClick={() => setTab(t.key)}
-            className={`flex-1 py-2.5 rounded-xl text-sm font-semibold transition ${
+            className={`cursor-pointer flex-1 py-2.5 rounded-xl text-sm font-semibold transition ${
               tab === t.key
                 ? "bg-linear-to-r from-indigo-500 to-purple-600 text-white shadow"
                 : "text-gray-400 hover:text-white"

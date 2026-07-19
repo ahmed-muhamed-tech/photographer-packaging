@@ -6,9 +6,9 @@ import { usePackagesData } from "../../hooks/usePackagesData";
 import { getTranslations } from "../../constants/translations";
 
 import LoadingSpinner from "../LoadingSpinner";
-import BookingPopup  from "./BookingPopup";
-import PackageCard   from "./PackageCard";
-import AddonsList    from "./AddonsList";
+import BookingPopup from "./BookingPopup";
+import PackageCard from "./PackageCard";
+import AddonsList from "./AddonsList";
 
 export default function Packages() {
   const { language } = useContext(LanguageContext);
@@ -18,7 +18,7 @@ export default function Packages() {
   const { packages, addons, loading } = usePackagesData();
 
   // state الـ Popup
-  const [showPopup, setShowPopup]     = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [bookingData, setBookingData] = useState({ date: "", namePackage: "" });
 
   // النصوص حسب اللغة
@@ -33,7 +33,9 @@ export default function Packages() {
   // لما يضغط "تأكيد الحجز"
   function handleConfirm() {
     if (!bookingData.date) {
-      toast.error(isArabic ? "يجب ملأ جميع البيانات" : "Please fill in all fields");
+      toast.error(
+        isArabic ? "يجب ملأ جميع البيانات" : "Please fill in all fields",
+      );
       return;
     }
 
@@ -41,7 +43,7 @@ export default function Packages() {
     const message = encodeURIComponent(
       isArabic
         ? `طلب حجز جديد\nتاريخ الحجز: ${bookingData.date}\nالباقة المطلوبة: ${bookingData.namePackage}\nيرجى التواصل لتأكيد الحجز.`
-        : `New Booking Request\nBooking Date: ${bookingData.date}\nPackage: ${bookingData.namePackage}\nPlease contact us to confirm.`
+        : `New Booking Request\nBooking Date: ${bookingData.date}\nPackage: ${bookingData.namePackage}\nPlease contact us to confirm.`,
     );
 
     // بيفتح WhatsApp بالرسالة الجاهزة
@@ -69,7 +71,6 @@ export default function Packages() {
       )}
 
       <div className="container mx-auto">
-
         {/* العنوان الرئيسي */}
         <h1 className="text-5xl sm:text-6xl font-extrabold text-center my-16">
           <span className="bg-linear-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">

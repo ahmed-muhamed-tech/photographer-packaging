@@ -10,27 +10,27 @@ const SOCIAL_LINKS = [
   {
     href: "https://www.facebook.com/ELSHAKYphotographer",
     icon: <FaFacebookF />,
-    colorClass: "border-blue-600 text-blue-600 hover:bg-blue-600",
+    colorClass: "border-gray-300 text-gray-300 bg-blue-600",
   },
   {
     href: "https://www.instagram.com/mohamed_ali_photography1/?igsh=MWhhNjBldnNramdjYQ%3D%3D#",
     icon: <FaInstagram />,
-    colorClass: "border-pink-600 text-pink-600 hover:bg-pink-600",
+    colorClass: "border-gray-300 text-gray-300 bg-pink-600",
   },
   {
     href: "https://wa.me/201007021051",
     icon: <FaWhatsapp />,
-    colorClass: "border-green-500 text-green-500 hover:bg-green-500",
+    colorClass: "border-gray-300 text-gray-300 bg-green-500",
   },
   {
     href: "https://www.tiktok.com/@mohamedali_photographer?_t=ZS-90uL9uOTzW6&_r=1",
     icon: <FaTiktok />,
-    colorClass: "border-black text-black hover:bg-black",
+    colorClass: "border-gray-300 text-gray-300 bg-black",
   },
   {
     href: "https://maps.app.goo.gl/DpdpudTZgD68bZZi6",
     icon: <FaMapMarkerAlt />,
-    colorClass: "border-indigo-700 text-indigo-700 hover:bg-indigo-700",
+    colorClass: "border-gray-300 text-gray-300 bg-indigo-700",
   },
 ];
 
@@ -74,12 +74,11 @@ export default function Home() {
 
           {/* وصف قصير */}
           <p className="text-lg leading-8 mb-10 w-[97%] lg:w-[70%] text-white">
-            Passionate developer & creative designer crafting beautiful digital
-            experiences. Building the future one line of code at a time.
+           A passionate photographer capturing timeless moments and transforming every shot into a story that lives forever.
           </p>
 
           {/* أيقونات السوشيال ميديا */}
-          <div className="social flex gap-3 mb-8">
+          <div className="social flex gap-3 mb-8 bg-black/60 py-2 px-4 rounded-xl">
             {SOCIAL_LINKS.map((link, index) => (
               <a
                 key={index}
