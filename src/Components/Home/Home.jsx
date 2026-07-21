@@ -10,27 +10,27 @@ const SOCIAL_LINKS = [
   {
     href: "https://www.facebook.com/ELSHAKYphotographer",
     icon: <FaFacebookF />,
-    colorClass: "border-gray-300 text-gray-300 bg-blue-600",
+    colorClass: "border-blue-600 text-blue-600 hover:text-gray-300 hover:bg-blue-600",
   },
   {
     href: "https://www.instagram.com/mohamed_ali_photography1/?igsh=MWhhNjBldnNramdjYQ%3D%3D#",
     icon: <FaInstagram />,
-    colorClass: "border-gray-300 text-gray-300 bg-pink-600",
+    colorClass: "border-pink-600 text-pink-600  hover:text-gray-300 hover:bg-pink-600",
   },
   {
     href: "https://wa.me/201007021051",
     icon: <FaWhatsapp />,
-    colorClass: "border-gray-300 text-gray-300 bg-green-500",
+    colorClass: "border-green-600 text-green-600  hover:text-gray-300 hover:bg-green-500",
   },
   {
     href: "https://www.tiktok.com/@mohamedali_photographer?_t=ZS-90uL9uOTzW6&_r=1",
     icon: <FaTiktok />,
-    colorClass: "border-gray-300 text-gray-300 bg-black",
+    colorClass: "border-black text-black hover:text-gray-300 hover:bg-black",
   },
   {
     href: "https://maps.app.goo.gl/DpdpudTZgD68bZZi6",
     icon: <FaMapMarkerAlt />,
-    colorClass: "border-gray-300 text-gray-300 bg-indigo-700",
+    colorClass: "border-indigo-600 text-indigo-600  hover:text-gray-300 hover:bg-indigo-700",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function Home() {
           </p>
 
           {/* أيقونات السوشيال ميديا */}
-          <div className="social flex gap-3 mb-8 bg-black/60 py-2 px-4 rounded-xl">
+          <div className="social flex gap-3 mb-8">
             {SOCIAL_LINKS.map((link, index) => (
               <a
                 key={index}

@@ -1,0 +1,35 @@
+[debug] [2026-07-21T23:51:21.041Z] ----------------------------------------------------------------------
+[debug] [2026-07-21T23:51:21.047Z] Command:       /usr/bin/node-22 /usr/local/bin/firebase use --add
+[debug] [2026-07-21T23:51:21.048Z] CLI Version:   15.19.1
+[debug] [2026-07-21T23:51:21.049Z] Platform:      linux
+[debug] [2026-07-21T23:51:21.049Z] Node Version:  v22.22.2
+[debug] [2026-07-21T23:51:21.049Z] Time:          Wed Jul 22 2026 02:51:21 GMT+0300 (Eastern European Summer Time)
+[debug] [2026-07-21T23:51:21.050Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-07-21T23:51:21.373Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-21T23:51:21.374Z] > authorizing via signed-in user (mohammed.ali.photographer@gmail.com)
+[debug] [2026-07-21T23:51:21.375Z] Checked if tokens are valid: true, expires at: 1784681412869
+[debug] [2026-07-21T23:51:21.375Z] Checked if tokens are valid: true, expires at: 1784681412869
+[debug] [2026-07-21T23:51:21.377Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-07-21T23:51:22.139Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-07-21T23:51:22.139Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2026-07-21T23:52:18.729Z] ----------------------------------------------------------------------
+[debug] [2026-07-21T23:52:18.732Z] Command:       /usr/bin/node-22 /usr/local/bin/firebase use packaging-408b9
+[debug] [2026-07-21T23:52:18.733Z] CLI Version:   15.19.1
+[debug] [2026-07-21T23:52:18.733Z] Platform:      linux
+[debug] [2026-07-21T23:52:18.733Z] Node Version:  v22.22.2
+[debug] [2026-07-21T23:52:18.733Z] Time:          Wed Jul 22 2026 02:52:18 GMT+0300 (Eastern European Summer Time)
+[debug] [2026-07-21T23:52:18.734Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-07-21T23:52:18.955Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-21T23:52:18.955Z] > authorizing via signed-in user (mohammed.ali.photographer@gmail.com)
+[debug] [2026-07-21T23:52:18.957Z] Checked if tokens are valid: true, expires at: 1784681412869
+[debug] [2026-07-21T23:52:18.957Z] Checked if tokens are valid: true, expires at: 1784681412869
+[debug] [2026-07-21T23:52:18.958Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/packaging-408b9/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2026-07-21T23:52:18.958Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/packaging-408b9/services/cloudresourcemanager.googleapis.com  x-goog-user-project=packaging-408b9
+[debug] [2026-07-21T23:52:20.081Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/packaging-408b9/services/cloudresourcemanager.googleapis.com 200
+[debug] [2026-07-21T23:52:20.082Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/packaging-408b9/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2026-07-21T23:52:20.088Z] Checked if tokens are valid: true, expires at: 1784681412869
+[debug] [2026-07-21T23:52:20.088Z] Checked if tokens are valid: true, expires at: 1784681412869
+[debug] [2026-07-21T23:52:20.088Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/packaging-408b9 [none]
+[debug] [2026-07-21T23:52:20.520Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/packaging-408b9 200

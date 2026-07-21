@@ -1,6 +1,4 @@
-
 export default function PackageCard({ pkg, isArabic, t, onBook }) {
- 
   const title = isArabic ? pkg.title : pkg.title_en;
   const features = isArabic ? pkg.features : pkg.features_en;
   const gifts = isArabic ? pkg.gifts : pkg.gifts_en;
@@ -22,9 +20,9 @@ export default function PackageCard({ pkg, isArabic, t, onBook }) {
       </h2>
 
       {/* gifts & features*/}
-      <div className="bg-gray-700/20 rounded-2xl mb-4 py-4 flex-1">
+      <div className="bg-gray-700/20 rounded-2xl mb-4 overflow-hidden py-4 ">
         {/* features */}
-        <ul className="space-y-4 text-lg px-3">
+        <ul className="space-y-4 text-lg flex-1 px-3">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center gap-3 text-gray-300">
               <span className="text-indigo-400 shrink-0">✔</span>
@@ -34,36 +32,28 @@ export default function PackageCard({ pkg, isArabic, t, onBook }) {
         </ul>
 
         {/* gifts */}
-        {gifts.length > 0 && (
-          <>
-            <div className="mx-3 mt-4 mb-2 border-t border-gray-600/50 pt-3">
-              <p className="text-indigo-300 text-sm font-semibold">{t.gifts}</p>
-            </div>
-            <ul className="space-y-3 text-lg px-3">
-              {gifts.map((gift, index) => (
-                <li
-                  key={index}
-                  className="flex items-center gap-3 text-gray-300"
-                >
-                  <span className="text-indigo-400 shrink-0">✔</span>
-                  {gift}
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
+        <ul className="space-y-3 text-lg bg-linear-to-r w-fit  px-3 mt-3 from-indigo-500/5 to-purple-600/5 ">
+          {gifts.length > 0 &&
+            gifts.map((gift, index) => (
+              <li key={index} className="flex items-center gap-3 text-gray-300">
+                <span className="text-indigo-400 shrink-0">✔</span>
+                {gift}
+              </li>
+            ))}
+        </ul>
       </div>
 
       {/* السعر */}
       <div className="text-center mt-auto py-2 rounded-2xl bg-indigo-500/30 shadow-xl">
         {pkg.old_price && (
-          <div className="text-gray-400 line-through text-lg">
+          <div className="text-lg w-fit mx-auto  text-gray-30 relative before:content-[''] before:absolute before:bg-red-500
+                before:left-1/2 before:top-1/2 before:-rotate-18 before:-translate-1/2 before:w-18 before:h-1 before:opacity-60 ">
             {pkg.old_price} {t.egp}
           </div>
         )}
         <div className="text-4xl font-extrabold">
           {pkg.new_price}
-          <span className={`text-lg ${isArabic ? "mr-2" : "ml-2"}`}>
+          <span className="text-lg">
             {t.egp}
           </span>
         </div>

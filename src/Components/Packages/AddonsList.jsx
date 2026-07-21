@@ -21,9 +21,12 @@ export default function AddonsList({ addons, isArabic, t }) {
           return (
             <li
               key={addon.id}
-              className="flex flex-col lg:flex-row justify-between items-center bg-gray-800 py-3 px-6 rounded-2xl hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300"
+              className="flex flex-col lg:flex-row justify-between items-center
+                bg-gray-800 py-6 px-6 rounded-2xl
+                hover:shadow-lg hover:shadow-indigo-500/10
+                transition-all duration-300"
             >
-              <span className="text-xl lg:text-2xl text-gray-300">{addonText}</span>
+              <span className="text-sm lg:text-lg text-gray-300">{addonText}</span>
               <span className="mt-3 lg:mt-0 bg-indigo-600 px-5 py-2 rounded-full text-sm font-bold">
                 {addon.price} {isArabic ? "جنيه" : "EGP"}
               </span>
